@@ -1,3 +1,4 @@
+import Ejercicio1.ListDouble;
 import Ejercicio1.ListSimple;
 
 public class main {
@@ -5,7 +6,7 @@ public class main {
 
     public static void main(String[] args) {
 
-        ListSimple L1 = new ListSimple();
+        ListDouble L1 = new ListDouble();
 
 
         L1.agregar(1);
@@ -15,8 +16,9 @@ public class main {
         L1.agregar(5);
 
 
-        L1.imprimir();
+//        L1.imprimir();
 
+        System.out.println(L1.getPrimerNodo().getBack().getData());
 
 
 
