@@ -2,7 +2,7 @@ package Ejercicio1;
 
 public class Nodo {
 
-    private int data;
+    private String data;
     private Nodo next;
     private Nodo back;
     private int ID;
@@ -10,17 +10,17 @@ public class Nodo {
     public Nodo() {
     }
 
-    public Nodo(int data) {
+    public Nodo(String data) {
         this.data = data;
         ID++;
     }
 
 
-    public int getData() {
+    public String getData() {
         return data;
     }
 
-    public void setData(int data) {
+    public void setData(String data) {
         this.data = data;
     }
 

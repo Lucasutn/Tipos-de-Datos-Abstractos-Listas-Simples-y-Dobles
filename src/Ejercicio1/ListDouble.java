@@ -1,7 +1,5 @@
 package Ejercicio1;
 
-import com.sun.xml.internal.bind.v2.model.core.ID;
-
 public class ListDouble {
 
     private Nodo primerNodo;
@@ -18,7 +16,7 @@ public class ListDouble {
     }
 
 
-    public void agregar(int num) {
+    public void agregar(String num) {
 
         Nodo n1 = new Nodo(num);
 
@@ -140,6 +138,13 @@ public class ListDouble {
             recorrerEImprimir(nodo.getNext());
 
         }
+
+    }
+
+    /**
+     * t*/
+    public void buscarNombre(int indice, Nodo nodo){
+
 
     }
 

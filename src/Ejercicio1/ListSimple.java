@@ -15,7 +15,7 @@ public class ListSimple {
     }
 
 
-    public void agregar(int num) {
+    public void agregar(String num) {
 
         Nodo n1 = new Nodo(num);
 
