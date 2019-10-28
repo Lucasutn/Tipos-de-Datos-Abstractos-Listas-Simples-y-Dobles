@@ -1,5 +1,7 @@
 package Ejercicio1;
 
+import javax.swing.*;
+
 public class ListDouble {
 
     private Nodo primerNodo;
@@ -142,9 +144,46 @@ public class ListDouble {
     }
 
     /**
-     * t*/
-    public void buscarNombre(int indice, Nodo nodo){
+     * Metodo que permite buscar un nombre o data enviando una posicion o indice*/
 
+    public String buscarNombre(int ind){
+
+        try {
+            while (this.primerNodo.getBack().getID() < ind || ind < 0) {
+
+                ind = Integer.parseInt(JOptionPane.showInputDialog(null, "Fuera de rango Ingrese un nuevo indice: "));
+            }
+        }catch (NumberFormatException number){
+
+            return "Ingrese un valor numero para el indice";
+
+
+        }
+        return buscarNombreBis(ind);
+
+
+
+    }
+    private String buscarNombreBis(int indice){
+
+        Nodo nodo = this.primerNodo;
+
+        while(nodo.getID()!=indice){
+
+                nodo=nodo.getNext();
+
+        }
+
+        return nodo.getData();
+
+
+//        if(this.primerNodo.getID()==indice){
+//
+//            return this.primerNodo.getData();
+//
+//        }else{
+//
+//        }
 
     }
 

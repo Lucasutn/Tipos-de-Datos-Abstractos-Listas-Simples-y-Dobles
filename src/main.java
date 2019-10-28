@@ -20,12 +20,15 @@ public class main {
         L1.agregar("pedro");
         L1.agregar("ana");
         L1.agregar("nina");
+
 //        L1.agregar();
 
 
-        L1.imprimir();
+//        L1.imprimir();
 
-        System.out.println(L1.getPrimerNodo().getBack().getID());
+        System.out.println(L1.buscarNombre(8));
+
+//        System.out.println(L1.getPrimerNodo().getNext().getID());
 
 
 
