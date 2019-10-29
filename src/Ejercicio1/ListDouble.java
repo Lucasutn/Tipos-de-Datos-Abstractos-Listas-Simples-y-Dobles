@@ -144,9 +144,13 @@ public class ListDouble {
     }
 
     /**
-     * Metodo que permite buscar un nombre o data enviando una posicion o indice*/
+     *
+     * Metodo que permite buscar un nombre o data enviando una posicion o indice
+     * Utilizo una funcion recursiva dentro del try catch que permite iterar en caso de que se ingrese un caracter o un simbolo
+     * en dicho caso reinicia el parametro ind asignando -1, lo que permite que el while itere*/
 
     public String buscarNombre(int ind){
+
 
         try {
             while (this.primerNodo.getBack().getID() < ind || ind < 0) {
@@ -155,13 +159,15 @@ public class ListDouble {
             }
         }catch (NumberFormatException number){
 
-            return "Ingrese un valor numero para el indice";
+            ind=-1;
+
+            return buscarNombre(ind);
 
 
         }
+
+
         return buscarNombreBis(ind);
-
-
 
     }
     private String buscarNombreBis(int indice){
