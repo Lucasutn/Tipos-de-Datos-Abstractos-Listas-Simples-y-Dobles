@@ -187,6 +187,25 @@ public class ListDouble {
 
     }
 
+
+
+    /**
+     * Borrar un elemento del arreglo recibiendo como parametro un indice*/
+
+    public void borrar(int indice){
+
+        Nodo nodo = this.primerNodo;
+
+        while(nodo.getID()!=indice){
+
+            nodo=nodo.getNext();
+
+        }
+
+        
+    }
+
+
 //    public void recorrer(){
 //
 //        recorrerFuntion(this.primerNodo);
