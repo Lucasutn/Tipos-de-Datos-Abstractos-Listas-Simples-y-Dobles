@@ -1,37 +1,40 @@
 import Ejercicio1.ListDouble;
 import Ejercicio1.ListSimple;
 
+import javax.swing.*;
+import java.util.Scanner;
+
 public class main {
 
-//    Ejercicio 3:
-//    Incluya en todos los tipos de Listas un método que permita eliminar un valor en una posición
-//    determinada y luego imprima el resultado de la lista resultante.
-//    Ejemplo: En una lista conformada por los siguientes valores: “juan”, “pedro”, “ana” y “nina”,
-//    solicitar eliminar el valor en la posición 2, el cual sería “ana” (considerando que los índices en la
-//    lista se implementan de la misma forma que los Arreglos en Java, comenzando por el índice 0),
-//    la lista final sería “juan”, “pedro”, “nina”.
+//    Ejercicio 4:
+//    Desarrolle un programa que permita leer por teclado un serie de 5 caracteres y luego imprima
+//    la lista de forma inversa a como fueron ingresados por teclado. Utilice una estructura lineal
+//    dinámica para resolver dicho problema.
+//            Ejemplo: Si se ingresan por teclado los caracteres: “a”, “b”, “c”, “d”, “e”; la lista resultado seria
+//“e”, “d”, “c”, “b”, “a”.
 
 
     public static void main(String[] args) {
 
+        int num = 5;
+
+        Scanner scanner = new Scanner(System.in);
+
         ListDouble L1 = new ListDouble();
 
 
-        L1.agregar("juan");
-        L1.agregar("pedro");
-        L1.agregar("ana");
-        L1.agregar("nina");
-        L1.borrar(0);
+        while (num != 0) {
 
-//        L1.agregar();
+            L1.agregar(JOptionPane.showInputDialog("Ingrese un caracter: "));
+            num--;
 
+        }
+
+
+        /*
+         * Cambio en la funcion imprimir cambiando de lugar la funcion recursiva por arriba del print*/
 
         L1.imprimir();
-
-//        System.out.println(L1.buscarNombre(8));
-
-//        System.out.println(L1.getPrimerNodo().getNext().getData());
-
 
 
     }

@@ -136,10 +136,10 @@ public class ListDouble {
 
         } else {
 
-            System.out.println(nodo.getData());
 
             recorrerEImprimir(nodo.getNext());
 
+            System.out.println(nodo.getData());
         }
 
     }
