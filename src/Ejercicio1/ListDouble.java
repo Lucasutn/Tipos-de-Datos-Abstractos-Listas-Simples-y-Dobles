@@ -131,8 +131,9 @@ public class ListDouble {
 
     public void recorrerEImprimir(Nodo nodo) {
 
-        if (nodo == null) {
-            System.out.println(nodo);
+        if (nodo.getNext() == this.primerNodo) {
+            System.out.println(nodo.getData());
+
         } else {
 
             System.out.println(nodo.getData());
@@ -208,7 +209,52 @@ public class ListDouble {
 
         }
 
+        if(nodo==this.primerNodo){
+
+            nodo.getNext().setBack(this.primerNodo.getBack());
+            nodo.getBack().setNext(this.primerNodo.getNext());
+
+            this.primerNodo=nodo.getNext();
+
+            setIDLess(this.primerNodo);
+
+        }else if(nodo.getNext()==this.primerNodo){
+
+
+            nodo.getBack().setNext(this.primerNodo);
+            this.primerNodo.setBack(nodo.getBack());
+
+            setIDLess(nodo);
+        }else {
+
+            nodo.getNext().setBack(nodo.getBack());
+            nodo.getBack().setNext(nodo.getNext());
+            setIDLess(nodo);
+
+        }
+
         
+    }
+
+    /**
+     * */
+    private void setIDLess(Nodo nodo) {
+
+        nodo.setID(nodo.getID()-1);
+
+        while (nodo.getNext() != this.primerNodo) {
+
+            nodo=nodo.getNext();
+
+            nodo.setID(nodo.getID()-1);
+        }
+
+//        if(nodo.getNext()!= null) {
+//            nodo.getNext().setID(id + 1);
+//            setIDList(nodo.getNext(),id++);
+//        }
+
+
     }
 
 
