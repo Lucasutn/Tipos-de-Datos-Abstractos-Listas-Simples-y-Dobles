@@ -1,4 +1,4 @@
-package Ejercicio1;
+package Ejercicio5;
 
 public class Nodo {
 
@@ -6,6 +6,12 @@ public class Nodo {
     private Nodo next;
     private Nodo back;
     private int ID;
+    private String hora;
+
+    public Nodo(String data, String hora) {
+        this.data = data;
+        this.hora = hora;
+    }
 
     public Nodo() {
     }
@@ -46,5 +52,9 @@ public class Nodo {
 
     public void setBack(Nodo back) {
         this.back = back;
+    }
+
+    public String getHora() {
+        return hora;
     }
 }

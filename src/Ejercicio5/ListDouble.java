@@ -1,4 +1,4 @@
-package Ejercicio1;
+package Ejercicio5;
 
 import javax.swing.*;
 
@@ -18,9 +18,9 @@ public class ListDouble {
     }
 
 
-    public void agregar(String num) {
+    public void agregar(String num,String hora) {
 
-        Nodo n1 = new Nodo(num);
+        Nodo n1 = new Nodo(num,hora);
 
         if (this.primerNodo == null) {
 
@@ -62,7 +62,7 @@ public class ListDouble {
     /**
      * funcion para agregar un nuevo nodo el la posicion solicitada de 0 a n
      */
-    public void agregarNodo(Nodo newNodo, int id) {
+    private void agregarNodo(Nodo newNodo, int id) {
         Nodo aux = this.primerNodo;
         addNodo(newNodo, id, aux);
     }

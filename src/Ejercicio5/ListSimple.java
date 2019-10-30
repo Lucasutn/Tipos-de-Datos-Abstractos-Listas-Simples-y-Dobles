@@ -1,4 +1,4 @@
-package Ejercicio1;
+package Ejercicio5;
 public class ListSimple {
 
     private Nodo primerNodoSimple;
